@@ -1,0 +1,1 @@
+# gulp-esm2common [![Build Status](https://travis-ci.org/yuhonyon/gulp-esm2common.svg?branch=master)](https://travis-ci.org/yuhonyon/gulp-esm2common) [![npm](https://img.shields.io/npm/v/gulp-esm2common.svg)](https://www.npmjs.com/package/gulp-esm2common)

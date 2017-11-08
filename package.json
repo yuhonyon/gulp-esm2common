@@ -1,0 +1,26 @@
+{
+  "name": "gulp-esm2common",
+  "version": "1.0.0",
+  "description": "gulp插件 esm转commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "travis-publish": "node node_modules/travis-release/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuhonyon/f2e-modal.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "yufangyang",
+  "license": "ISC",
+  "devDependencies": {
+    "travis-release": "^1.0.0"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.8",
+    "through2": "^2.0.3"
+  }
+}
