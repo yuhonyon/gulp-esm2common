@@ -9,7 +9,8 @@ const reg={
   importOne: /import\s*{(.*)}\s*from\s+["'](.*)["']/g,
   exportFun: /export\s+function\s+([^(\s]+)/g,
   exportVar: /export\s+(const|let|var)\s+([^=\s]+)/g,
-  exportDef: /(export\s+default)|(export\s+(?={))/g
+  exportDef: /(export\s+default)|(export\s+(?={))/g,
+  importStyle: /import[^;\n]+\.(css|less|sass|scss)('|")(;?)/g
 };
 
 function exportFun2export(str){
@@ -46,6 +47,10 @@ function import2require(str){
   });
 }
 
+function clearImportStyle(str){
+  return str.replace(reg.importStyle,'');
+}
+
 function importOne2require(str){
   let ones="";
   let name='';
@@ -78,6 +83,7 @@ module.exports = opts => {
     }
 
     let contents=file.contents.toString();
+    contents=clearImportStyle(contents);
     contents=importAs2require(contents);
     contents=import2require(contents);
     contents=importOne2require(contents);
